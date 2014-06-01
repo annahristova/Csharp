@@ -1,0 +1,37 @@
+using System;
+
+
+namespace House
+{
+    class House
+    {
+        static void Main()
+        {
+            byte n = byte.Parse(Console.ReadLine());
+            string dotsaside = new string('.', (n - 1) / 2);
+            Console.WriteLine("{0}*{0}", dotsaside);
+
+            for (int i = 0; i < (n / 2) - 1; i++)
+            {
+                string dotsAside = new string('.', ((n - 1) / 2) - 1 - i);
+                string dotsInside = new string('.', 1 + 2 * i);
+                Console.WriteLine("{0}*{1}*{0}", dotsAside, dotsInside);
+
+            }
+            Console.WriteLine(new string('*', n));
+            for (int i = 0; i < (n / 2)-1; i++)
+            {
+                string dots = new string('.', (n / 4));
+                string dots1 = new string('.', (n/4));
+                string middle = new string('.', n - (n / 4) * 2 -2);
+               
+              Console.WriteLine("{0}*{1}*{2}", dots,middle,dots);
+
+            }
+            Console.Write(new string('.', (n / 4)));
+           Console.Write( new string('*', n-(n/4)*2));
+           Console.Write(new string('.', (n / 4)));
+        }
+    }
+
+}
